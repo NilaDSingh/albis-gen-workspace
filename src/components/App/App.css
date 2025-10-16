@@ -6,5 +6,53 @@
     height: 100vh;   
 }
 
-.navigation-container{
+.navbar{
+}
+
+.homepage{
+    margin-left: 7vh;
+}
+
+.header-container{
+    background: radial-gradient(circle,rgba(28, 32, 54, 1) 100%, rgba(54, 65, 114, 1) 100%);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    place-items: center;
+    border-color: #272e4b;
+
+}
+
+.header-title{
+    display: flex;
+    gap: 16px;
+    color: white;
+    font-size: medium;
+    margin-left: 2vw;
+}
+
+.page-container{
+    margin-left:8vh;
+    width: 100%;
+}
+
+.auto-progress-header{
+    color:white;
+    font-size: x-small;
+}
+
+.progress-bar{
+    width: 20vw;
+}
+
+.progress-bar-container{
+    display: flex;
+    place-items: center;
+    gap: 0.5vw;
+    font-size: x-small;
+    color: white;
+}
+
+.automation-container{
+    margin:60vw
 }
