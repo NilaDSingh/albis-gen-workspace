@@ -1,0 +1,21 @@
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.icon-container{
+    margin-top: 4vh;
+}
+
+.logo{
+    height: 4.5vh;
+    width: 2vw;
+    border-radius: 60px;
+    border-color: #272e4b;
+    margin-top: 2vh;
+}
+
+.logo-container{
+    text-align: center;
+}
