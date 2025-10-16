@@ -6,11 +6,12 @@
 
 .icon-container{
     margin-top: 4vh;
+    padding: 0.5vw;
 }
 
 .logo{
     height: 4.5vh;
-    width: 2vw;
+    width: 4.5vh;
     border-radius: 60px;
     border-color: #272e4b;
     margin-top: 2vh;

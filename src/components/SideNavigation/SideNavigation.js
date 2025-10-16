@@ -13,7 +13,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
 import IconButton from '@mui/material/IconButton';
-
+import CircleIcon from '@mui/icons-material/Circle';
 export default function SideNavigation(){
     const [open, setOpen] = React.useState(true)
 
@@ -34,6 +34,7 @@ export default function SideNavigation(){
             PaperProps={{
                 sx: drawerStyle
             }}
+            anchor='left'
             >   
             <div className="logo-container"><img className="logo" src={logo}></img></div>
             <div className='icon-container'>
@@ -48,12 +49,11 @@ export default function SideNavigation(){
                 <div className="icons">
                     <IconButton><SettingsOutlinedIcon sx={iconStyle}/></IconButton> 
                     <IconButton><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
-                    {/* replace with user icon */}<IconButton><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
+                    {/* replace with user icon */}<IconButton><CircleIcon sx={iconStyle}/></IconButton> 
 
                 </div>
             </div>
             </Drawer>
-            bye
         </div>
     )
 }
