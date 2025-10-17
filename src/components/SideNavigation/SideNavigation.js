@@ -14,9 +14,10 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
 import IconButton from '@mui/material/IconButton';
 import CircleIcon from '@mui/icons-material/Circle';
-export default function SideNavigation(){
+import Homepage from '../Homepage/Homepage';
+import mockUser from "../Images/mockUser.jpg"
+export default function SideNavigation({onUpdateTab}){
     const [open, setOpen] = React.useState(true)
-
     const drawerStyle={
         backgroundColor:"#131521",
         borderColor:"#272e4b"
@@ -26,6 +27,11 @@ export default function SideNavigation(){
         color:"#828282",
         fontSize:"large" 
     }
+
+    const handleClick = (value) => {
+        onUpdateTab(value)
+    }
+
     return(
         <div>
             <Drawer
@@ -39,18 +45,17 @@ export default function SideNavigation(){
             <div className="logo-container"><img className="logo" src={logo}></img></div>
             <div className='icon-container'>
                 <div className="icons">
-                    <IconButton><HomeOutlinedIcon sx={iconStyle}/></IconButton>
-                    <IconButton><DashboardCustomizeOutlinedIcon sx={iconStyle}/></IconButton>
-                    <IconButton><PowerOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton><AutoAwesomeOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton><PersonOutlineOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(1)}><HomeOutlinedIcon sx={iconStyle}/></IconButton>
+                    <IconButton onClick={() => handleClick(2)}><DashboardCustomizeOutlinedIcon sx={iconStyle}/></IconButton>
+                    <IconButton onClick={() => handleClick(3)}><PowerOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(4)}><AutoAwesomeOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(5)}><PersonOutlineOutlinedIcon sx={iconStyle}/></IconButton> 
                 </div>
                     <Divider sx={{backgroundColor:"#272e4b", marginTop:"25vh", marginBottom:'2vh'}}></Divider>
                 <div className="icons">
-                    <IconButton><SettingsOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
-                    {/* replace with user icon */}<IconButton><CircleIcon sx={iconStyle}/></IconButton> 
-
+                    <IconButton onClick={() => handleClick(6)}><SettingsOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(7)}><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <div><img className="logo" src={mockUser}></img></div>
                 </div>
             </div>
             </Drawer>

@@ -1,19 +1,24 @@
+import React, { useState } from 'react';
 import "./App.css"
 import SideNavigation from "../SideNavigation/SideNavigation"
 import Homepage from "../Homepage/Homepage"
 import HomeFilledIcon from '@mui/icons-material/HomeFilled';
 import LinearProgress from '@mui/material/LinearProgress';
-import { useState } from "react";
 
 export default function App(){
     const [progress, setProgress] = useState(30)
+    const [tab, setTab] = useState(0)
     const iconStyle={
         color:'#a887e5'
     }
+    const updateTab = (value) =>{
+        setTab(value)
+    }
+    console.log(tab)
 
     return(
         <div className="app-container">
-            <div><SideNavigation/></div>
+            <div className='navbar'><SideNavigation onUpdateTab={updateTab}/></div>
             <div className="page-container">
                 <div className="header-container">
                     <div className="header-title">
@@ -21,6 +26,7 @@ export default function App(){
                         <div>Workspace</div>
                     </div>
                     <div className="automation-container">
+                        <div>
                         <div className="auto-progress-header">Complete Automation Process</div>
                         <div className="progress-bar-container">
                             <div className="progress-bar">
@@ -38,9 +44,10 @@ export default function App(){
                             </div>
                             <div>{progress}%</div>
                         </div>
+                        </div>
                     </div>
                 </div>
-                <div className='homepage'><Homepage/></div>
+                {tab === 0 ? <div className = "homepage"><Homepage/></div> : <></>}
             </div>
         </div>
     )

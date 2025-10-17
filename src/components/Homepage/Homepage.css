@@ -1,0 +1,18 @@
+.scatter-plot{
+    width:30vw;
+    height: 40vh;
+}
+
+.line-chart{
+    width: 30vw;
+    height: 40vh;
+
+}
+
+.chart-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: center;
+    margin-top: 10vh;
+}
