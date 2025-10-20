@@ -45,16 +45,16 @@ export default function SideNavigation({onUpdateTab}){
             <div className="logo-container"><img className="logo" src={logo}></img></div>
             <div className='icon-container'>
                 <div className="icons">
-                    <IconButton onClick={() => handleClick(1)}><HomeOutlinedIcon sx={iconStyle}/></IconButton>
-                    <IconButton onClick={() => handleClick(2)}><DashboardCustomizeOutlinedIcon sx={iconStyle}/></IconButton>
-                    <IconButton onClick={() => handleClick(3)}><PowerOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton onClick={() => handleClick(4)}><AutoAwesomeOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton onClick={() => handleClick(5)}><PersonOutlineOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(0)}><HomeOutlinedIcon sx={iconStyle}/></IconButton>
+                    <IconButton onClick={() => handleClick(1)}><DashboardCustomizeOutlinedIcon sx={iconStyle}/></IconButton>
+                    <IconButton onClick={() => handleClick(2)}><PowerOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(3)}><AutoAwesomeOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(4)}><PersonOutlineOutlinedIcon sx={iconStyle}/></IconButton> 
                 </div>
                     <Divider sx={{backgroundColor:"#272e4b", marginTop:"25vh", marginBottom:'2vh'}}></Divider>
                 <div className="icons">
-                    <IconButton onClick={() => handleClick(6)}><SettingsOutlinedIcon sx={iconStyle}/></IconButton> 
-                    <IconButton onClick={() => handleClick(7)}><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(5)}><SettingsOutlinedIcon sx={iconStyle}/></IconButton> 
+                    <IconButton onClick={() => handleClick(6)}><LiveHelpOutlinedIcon sx={iconStyle}/></IconButton> 
                     <div><img className="logo" src={mockUser}></img></div>
                 </div>
             </div>
