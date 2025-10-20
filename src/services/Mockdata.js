@@ -22,3 +22,11 @@ export const  scatterPlot = [
 ]
 
 export const lineChart = [1, 5, 2, 6, 3, 9.3]
+
+export const messageData = [
+  {
+    time:'today',
+    messages:[
+    ]
+  }
+]

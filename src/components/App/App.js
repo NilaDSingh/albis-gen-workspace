@@ -4,15 +4,24 @@ import SideNavigation from "../SideNavigation/SideNavigation"
 import Homepage from "../Homepage/Homepage"
 import HomeFilledIcon from '@mui/icons-material/HomeFilled';
 import LinearProgress from '@mui/material/LinearProgress';
-
+import IconButton from '@mui/material/IconButton';
+import chatIcon from '../Images/chatIcon.png'
+import Chat from '../Chat/Chat'
 export default function App(){
     const [progress, setProgress] = useState(30)
     const [tab, setTab] = useState(0)
+    const [chatIsOpen, setChatisOpen] = useState(false)
     const iconStyle={
         color:'#a887e5'
     }
     const updateTab = (value) =>{
         setTab(value)
+    }
+    const openChat = () => {
+        setChatisOpen(true)
+    }
+    const closeChat = () => {
+        setChatisOpen(false)
     }
     console.log(tab)
 
@@ -48,6 +57,7 @@ export default function App(){
                     </div>
                 </div>
                 {tab === 0 ? <div className = "homepage"><Homepage/></div> : <></>}
+                {chatIsOpen ?<Chat onCloseChat={closeChat} open={true}></Chat> : <div className='chat-icon'><IconButton onClick={openChat}><img style={{width:'4vw'}} src={chatIcon}></img></IconButton></div>}
             </div>
         </div>
     )

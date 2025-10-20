@@ -19,6 +19,7 @@
     display: flex;
     place-items: center;
     border-color: #272e4b;
+    width:100%;
 
 }
 
@@ -27,7 +28,7 @@
     gap: 16px;
     color: white;
     font-size: medium;
-    margin-left: 3vw;
+    margin-left: 2vw;
 }
 
 .page-container{
@@ -53,5 +54,16 @@
 }
 
 .automation-container{
-    margin-left:60vw;
+    position: absolute;
+    right: 0;
+    margin-right: 2vw;
+}
+
+.chat-icon{
+    display: absolute;
+    margin-right: 3vw;
+    margin-bottom: 10vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
